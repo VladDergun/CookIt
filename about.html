@@ -31,10 +31,16 @@
             color: #444;
             text-align: center;
         }
+        
 
-        .about-mission i {
+        i + b {
             color: #cf3917;
             font-style: italic;
+        }
+
+        .about-mission p i{
+            color: #cf3917;
+            font-weight: bold;
         }
 
         .about-history {
@@ -105,6 +111,9 @@
             grid-template-columns: repeat(2, 1fr);
             gap: 20px;
         }
+        .values-grid > .value-item > h3{
+            text-decoration: underline;
+        }
 
         .value-item {
             background-color: #f8f8f8;
@@ -162,7 +171,6 @@
             font-style: italic;
         }
 
-        /* Responsive Styles */
         @media (max-width: 768px) {
             .values-grid {
                 grid-template-columns: 1fr;
@@ -224,7 +232,7 @@
 
         <section class="about-mission">
             <h2 id="mission">Our mission</h2>
-            <p>Our mission is to <i>help</i> you to find the best recipes for your favorite dishes.</p>
+            <p>Our mission is to <i>help</i> you to find the <b>best recipes</b> for your favorite dishes.</p>
             <p>At CookIt, we believe that cooking should be an enjoyable and rewarding experience for everyone. Whether you're a beginner in the kitchen or an experienced home chef, we're here to guide you through your culinary journey.</p>
             <p>Our platform is designed to make cooking accessible, fun, and successful for all skill levels. We carefully test and curate each recipe to ensure you get consistent, delicious results every time.</p>
         </section>
