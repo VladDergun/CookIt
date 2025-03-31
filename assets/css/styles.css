@@ -1,0 +1,322 @@
+/* General Styles */
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+    color: #333;
+    box-sizing: border-box;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background-color: #cf3917;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+.nav-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.nav-list li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.1em;
+    padding: 8px 16px;
+    border-radius: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-list li a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.hero-container {
+    position: relative;
+}
+
+.hero-image {
+    width: 100%;
+    max-height: 600px;
+    object-fit: cover;
+    display: block;
+    filter: brightness(0.8);
+}
+
+.hero figcaption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    width: 100%;
+}
+
+.hero figcaption h1 {
+    font-size: 4em;
+    margin: 0;
+    letter-spacing: 2px;
+}
+
+/* Best Recipes Section */
+.best-recipes {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #fff;
+    margin-bottom: 40px;
+}
+
+.best-recipes h2 {
+    color: #cf3917;
+    font-size: 2.5em;
+    margin-bottom: 30px;
+}
+
+.best-recipes-table {
+    width: 100%;
+    max-width: 1000px;
+    margin: auto;
+    border-collapse: separate;
+    border-spacing: 0 15px;
+}
+
+.best-recipes-table caption {
+    font-size: 1.2em;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.best-recipes-table th {
+    padding: 15px;
+    font-size: 1.3em;
+    color: #333;
+}
+
+.best-recipes-table td {
+    padding: 15px;
+    border: none;
+    background-color: #f9f9f9;
+}
+
+.recipe-image {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.recipe-image:hover {
+    transform: scale(1.05);
+}
+
+.recipe-link {
+    display: inline-block;
+    text-decoration: none;
+    font-weight: bold;
+    color: #fff;
+    background-color: #cf3917;
+    padding: 10px 20px;
+    border-radius: 25px;
+    transition: background-color 0.3s ease;
+}
+
+.recipe-link:hover {
+    background-color: #b32d0f;
+}
+
+/* Mission and Why Choose Us Layout */
+.mission-and-why-choose {
+    display: flex;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.why-choose-us {
+    padding: 40px;
+    background-color: #fff;
+    flex: 1;
+    margin: 0;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+}
+
+.mission {
+    padding: 40px;
+    background-color: #fff;
+    flex: 1;
+    margin: 0;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+/* Responsive layout */
+@media (max-width: 768px) {
+    .mission-and-why-choose {
+        flex-direction: column;
+    }
+    
+    .mission, .why-choose-us {
+        margin: 20px 0;
+    }
+}
+
+
+
+
+h2{
+    color: #cf3917;
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.mission h2 {
+    font-size: 3em !important;
+    margin-bottom: 30px;
+}
+
+
+.why-choose-us dl {
+    display: grid;
+    gap: 20px;
+}
+
+.why-choose-us dt {
+    font-size: 1.4em;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.why-choose-us dd {
+    margin-left: 0;
+    color: #666;
+    font-size: 1.1em;
+}
+
+
+
+.mission p {
+    font-size: 1.1em;
+    line-height: 1.8;
+    color: #444;
+    margin-bottom: 20px;
+}
+
+.mission a {
+    color: #cf3917;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.3s ease;
+}
+
+.mission a:hover {
+    border-color: #cf3917;
+}
+.faq{
+    margin: 30px;
+}
+/* FAQ Section */
+.faq details {
+    margin-bottom: 1rem;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.faq summary {
+    padding: 1rem;
+    background-color: #f8f8f8;
+    cursor: pointer;
+    font-weight: 600;
+    position: relative;
+    outline: none;
+}
+
+.faq summary:hover {
+    background-color: #f0f0f0;
+}
+
+.faq summary::marker,
+.faq summary::-webkit-details-marker {
+    display: none;
+}
+
+.faq summary::after {
+    content: '+';
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.5rem;
+    color: #cf3917;
+    transition: transform 0.3s ease;
+}
+
+.faq details[open] summary::after {
+    transform: translateY(-50%) rotate(45deg);
+}
+
+.faq details p {
+    padding: 1rem;
+    margin: 0;
+    background-color: white;
+}
+
+.faq details[open] {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 30px;
+    background-color: #333;
+    color: #fff;
+    margin-top: 40px;
+}
+
+footer p {
+    margin: 10px 0;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.3s ease;
+}
+
+footer a:hover {
+    border-color: #fff;
+}
+
+figure {
+    margin: 0;
+}
