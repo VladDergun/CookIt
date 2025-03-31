@@ -7,29 +7,72 @@
     <meta description="CookIt is a website that helps you to find the best recipes for your favorite dishes.">
     <meta keywords="CookIt, recipes, food, dishes, cooking, kitchen, meals, ingredients, cooking instructions, cooking time, cooking difficulty, cooking tools, cooking tips, cooking tricks, cooking hacks, cooking techniques, cooking methods, cooking styles">
     <meta robots="index, follow">
-    <meta og:title="Home | CookIt">
+    <meta og:title="Contact us | CookIt">
     <meta og:description="CookIt is a website that helps you to find the best recipes for your favorite dishes.">
     <title>Contact us | CookIt</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <style>
+
+        form {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        input[type="text"], input[type="email"], textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1em;
+            box-sizing: border-box;
+            transition: border-color 0.3s ease;
+        }
+
+        input[type="submit"] {
+            background-color: #cf3917;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: background-color 0.3s ease;
+        }
+    </style>
 </head>
-<body bgcolor="#FFDAB9" alink="#FF0000" vlink="#FF0000" link="#FF0000">
-    <header>
-        <nav>
-            <ul>
-                <li type="disc"><a href="index.html">Home</a></li>
-                <li type="square"><a href="recipes.html">Recipes</a></li>
-                <li type="circle"><a href="about.html">About</a></li>
-                <li type="disc"><a href="contact.html">Contact</a></li>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <ul class="nav-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="recipes.html">Recipes</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <section>
-            <h1>CookIt - Contact us</h1>
-            <img src="assets/img/hero.jpg" alt="CookIt" width="600" height="400">
+        <section class="hero">
+            <figure class="hero-container">
+                <img src="assets/img/hero.jpg" alt="CookIt Hero" class="hero-image">
+                <figcaption><h1>CookIt - Contact us</h1></figcaption>
+            </figure>     
         </section>
-        <p>For any questions or comments, please contact us at <a href="mailto:k6NtH@example.com">k6NtH@example.com</a>.</p>
-        <p>You can also use contact form below:</p>
+
+        <p style="text-align: center;">For any questions or comments, please contact us at <a href="mailto:k6NtH@example.com">k6NtH@example.com</a>.</p>
+        <p style="text-align: center;">You can also use contact form below:</p>
 
         <form>
             <label for="name">Name:</label>
@@ -41,19 +84,19 @@
             <input type="submit" value="Send">
         </form>
 
-        <section>
-            <h2 id="faq">FAQ</h2>
+        <section class="faq">
+            <h2 id="faq">Frequently Asked Questions</h2>
             <details>
-                <summary>What is CookIt?</summary>
-                <p>CookIt is a website that helps you to find the best recipes for your favorite dishes.</p>
+                <summary>What makes CookIt special?</summary>
+                <p>CookIt stands out for its expertly curated recipes, detailed instructions, and commitment to helping home cooks succeed. Our recipes are tested multiple times to ensure reliability and delicious results.</p>
             </details>
             <details>
-                <summary>How to use CookIt?</summary>
-                <p>Just click on the recipes you want to see.</p>
+                <summary>How do I get started with CookIt?</summary>
+                <p>Simply browse our recipe collection, choose a dish that interests you, and follow our step-by-step instructions. Our recipes include detailed ingredient lists, timing information, and helpful tips for success.</p>
             </details>
             <details>
-                <summary>Do we have partners?</summary>
-                <p>Yes, we have partners all over the world. One of our main partners is <a href="https://www.allrecipes.com/">AllRecipes</a></p>
+                <summary>Do you have partnerships?</summary>
+                <p>Yes, we collaborate with renowned chefs, quality ingredient suppliers, and respected culinary institutions worldwide. One of our main partners is <a href="https://www.allrecipes.com/">AllRecipes</a>, helping us bring you an even wider variety of trusted recipes.</p>
             </details>
         </section>
 

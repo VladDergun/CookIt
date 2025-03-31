@@ -10,32 +10,250 @@
     <meta og:title="About us | CookIt">
     <meta og:description="CookIt is a website that helps you to find the best recipes for your favorite dishes.">
     <title>About us | CookIt</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <style>
+        .about-mission {
+            padding: 40px;
+            max-width: 800px;
+            margin: 40px auto;
+        }
+
+        .about-mission h2 {
+            color: #cf3917;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .about-mission p {
+            font-size: 1.2em;
+            line-height: 1.8;
+            color: #444;
+            text-align: center;
+        }
+
+        .about-mission i {
+            color: #cf3917;
+            font-style: italic;
+        }
+
+        .about-history {
+            padding: 40px;
+            max-width: 800px;
+            margin: 40px auto;
+        }
+
+        .about-history h2 {
+            color: #cf3917;
+            font-size: 2.5em;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .about-history table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            margin: 20px 0;
+        }
+
+        .about-history caption {
+            font-size: 1.2em;
+            color: #666;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+
+        .about-history th {
+            background-color: #f0f7ff;
+            color: #333;
+            font-weight: bold;
+            padding: 15px;
+            text-align: left;
+            border-bottom: 2px solid #cf3917;
+        }
+
+        .about-history td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .about-history td[rowspan] {
+            background-color: #f8f8f8;
+            font-weight: bold;
+            color: #cf3917;
+            text-align: center;
+            border-right: 1px solid #eee;
+        }
+
+        .about-values {
+            padding: 40px;
+            background-color: #fff;
+            max-width: 800px;
+            margin: 40px auto;
+        }
+
+        .about-values h2 {
+            color: #cf3917;
+            font-size: 2.5em;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .value-item {
+            background-color: #f8f8f8;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .value-item h3 {
+            color: #cf3917;
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+        
+        .about-team {
+            padding: 40px;
+            background-color: #fff;
+            max-width: 800px;
+            margin: 40px auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .about-team h2 {
+            color: #cf3917;
+            font-size: 2.5em;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .team-member {
+            background-color: #f8f8f8;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .team-member h3 {
+            color: #cf3917;
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        .team-role {
+            color: #666;
+            font-size: 1.2em;
+            margin-bottom: 10px;
+            font-style: italic;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .values-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .team-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .about-mission,
+            .about-history,
+            .about-values,
+            .about-team {
+                margin: 20px;
+                padding: 20px;
+            }
+
+            .about-mission h2,
+            .about-history h2,
+            .about-values h2,
+            .about-team h2 {
+                font-size: 2em;
+            }
+
+            .about-history table {
+                font-size: 0.9em;
+            }
+
+            .value-item,
+            .team-member {
+                padding: 15px;
+            }
+
+            .value-item h3,
+            .team-member h3 {
+                font-size: 1.3em;
+            }
+        }
+    </style>
 </head>
-<body bgcolor="#FFDAB9" alink="#FF0000" vlink="#FF0000" link="#FF0000">
-    <header>
-        <nav>
-            <ul>
-                <li type="disc"><a href="index.html">Home</a></li>
-                <li type="square"><a href="recipes.html">Recipes</a></li>
-                <li type="circle"><a href="about.html">About</a></li>
-                <li type="disc"><a href="contact.html">Contact</a></li>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <ul class="nav-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="recipes.html">Recipes</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
-
     <main>
-        <section>
-            <h1>CookIt - About us</h1>
-            <img src="assets/img/hero.jpg" alt="CookIt" width="600" height="400">
+        <section class="hero">
+            <figure class="hero-container">
+                <img src="assets/img/hero.jpg" alt="CookIt Hero" class="hero-image">
+                <figcaption><h1>CookIt - About us</h1></figcaption>
+            </figure>     
         </section>
 
-        <section>
+        <section class="about-mission">
             <h2 id="mission">Our mission</h2>
             <p>Our mission is to <i>help</i> you to find the best recipes for your favorite dishes.</p>
+            <p>At CookIt, we believe that cooking should be an enjoyable and rewarding experience for everyone. Whether you're a beginner in the kitchen or an experienced home chef, we're here to guide you through your culinary journey.</p>
+            <p>Our platform is designed to make cooking accessible, fun, and successful for all skill levels. We carefully test and curate each recipe to ensure you get consistent, delicious results every time.</p>
         </section>
 
-        <section>
+        <section class="about-values">
+            <h2>Our Values</h2>
+            <div class="values-grid">
+                <div class="value-item">
+                    <h3>Quality First</h3>
+                    <p>We never compromise on the quality of our recipes. Each dish is tested multiple times in real home kitchens to ensure perfect results.</p>
+                </div>
+                <div class="value-item">
+                    <h3>Community Focus</h3>
+                    <p>We believe in the power of sharing and learning from each other. Our community of home cooks is at the heart of everything we do.</p>
+                </div>
+                <div class="value-item">
+                    <h3>Continuous Learning</h3>
+                    <p>We're always exploring new techniques, flavors, and cooking methods to bring you the best culinary experiences.</p>
+                </div>
+                <div class="value-item">
+                    <h3>Sustainability</h3>
+                    <p>We promote sustainable cooking practices and encourage the use of seasonal, locally-sourced ingredients whenever possible.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="about-history">
             <h2 id="history">Our history</h2>
+            <p>Since our founding in 2020, CookIt has grown from a small recipe blog to a comprehensive cooking platform. Here's our journey:</p>
             <table>
                 <caption>Our History</caption>
                 <thead bgcolor="aliceblue">
@@ -74,19 +292,40 @@
             
         </section>
 
-        <section>
-            <h2 id="faq">FAQ</h2>
+        <section class="about-team">
+            <h2>Meet Our Team</h2>
+            <div class="team-grid">
+                <div class="team-member">
+                    <h3>Chef Maria Rodriguez</h3>
+                    <p class="team-role">Head Recipe Developer</p>
+                    <p>With over 15 years of professional cooking experience, Maria ensures that every recipe meets our high standards of quality and taste.</p>
+                </div>
+                <div class="team-member">
+                    <h3>John Smith</h3>
+                    <p class="team-role">Food Photographer</p>
+                    <p>John's expertise in food photography helps bring our recipes to life, making them both appealing and easy to follow.</p>
+                </div>
+                <div class="team-member">
+                    <h3>Sarah Chen</h3>
+                    <p class="team-role">Content Manager</p>
+                    <p>Sarah works to make sure our recipes are clear, concise, and accessible to cooks of all skill levels.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="faq">
+            <h2 id="faq">Frequently Asked Questions</h2>
             <details>
-                <summary>What is CookIt?</summary>
-                <p>CookIt is a website that helps you to find the best recipes for your favorite dishes.</p>
+                <summary>What makes CookIt special?</summary>
+                <p>CookIt stands out for its expertly curated recipes, detailed instructions, and commitment to helping home cooks succeed. Our recipes are tested multiple times to ensure reliability and delicious results.</p>
             </details>
             <details>
-                <summary>How to use CookIt?</summary>
-                <p>Just click on the recipes you want to see.</p>
+                <summary>How do I get started with CookIt?</summary>
+                <p>Simply browse our recipe collection, choose a dish that interests you, and follow our step-by-step instructions. Our recipes include detailed ingredient lists, timing information, and helpful tips for success.</p>
             </details>
             <details>
-                <summary>Do we have partners?</summary>
-                <p>Yes, we have partners all over the world. One of our main partners is <a href="https://www.allrecipes.com/">AllRecipes</a></p>
+                <summary>Do you have partnerships?</summary>
+                <p>Yes, we collaborate with renowned chefs, quality ingredient suppliers, and respected culinary institutions worldwide. One of our main partners is <a href="https://www.allrecipes.com/">AllRecipes</a>, helping us bring you an even wider variety of trusted recipes.</p>
             </details>
         </section>
 

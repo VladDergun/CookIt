@@ -10,104 +10,100 @@
     <meta og:title="Home | CookIt">
     <meta og:description="CookIt is a website that helps you to find the best recipes for your favorite dishes.">
     <title>Home | CookIt</title>
-
+    <link rel="stylesheet" href="assets/css/styles.css">
 </head>
-<body bgcolor="#FFDAB9" alink="#FF0000" vlink="#FF0000" link="#FF0000">
-    <header>
-        <nav>
-            <ul>
-                <li type="disc"><a href="index.html">Home</a></li>
-                <li type="square"><a href="recipes.html">Recipes</a></li>
-                <li type="circle"><a href="about.html">About</a></li>
-                <li type="disc"><a href="contact.html">Contact</a></li>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <ul class="nav-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="recipes.html">Recipes</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <main>
-        <section>
-            <h1>Welcome to CookIt</h1>
-            <figure>
-                <img src="assets/img/hero.jpg" alt="CookIt" width="600" height="400">
-                <figcaption>600x400</figcaption>
-            </figure>
-            <figure>
-                <a href="assets/img/hero.jpg" target="_blank">
-                    <img src="assets/img/hero.jpg" alt="CookIt" width="300" height="200">
-                </a>
-                <figcaption>400x300</figcaption>
-            </figure>       
-             <p>CookIt is a website that helps you to find the best recipes for your favorite dishes.</p>
-
-            <p><b>Our mission</b> is to help you to find the best recipes for your favorite dishes.</p>
-            <p>You can find the best recipes for yourself in our <a href="recipes.html#recipes-list">recipes list</a></p>
-            <p>For more information read our <a href="#faq">FAQ</a> or contact us. You can find contact information on our <a href="contact.html">Contact</a> page.</p>
+    <main class="main-content">
+        <section class="hero">
+            <figure class="hero-container">
+                <img src="assets/img/hero.jpg" alt="CookIt Hero" class="hero-image">
+                <figcaption><h1>CookIt - Best recipes</h1></figcaption>
+            </figure>     
         </section>
 
-        <section>
+        <section class="best-recipes">
             <h2>Best recipes</h2>
-            <table>
-                <caption>Best recipes of 2025</caption>
-                <thead bgcolor="aliceblue">
+            <table class="best-recipes-table">
+                <caption>Our Most Popular Recipes of 2025 - Tried and Tested by Our Expert Chefs</caption>
+                <thead>
                     <tr>
-                        <th scope="col">Lasagna</th>
-                        <th scope="col">Pizza quattro formaggi</th>
-                        <th scope="col">Pasta carbonara</th>
+                        <th>Classic Lasagna</th>
+                        <th>Pizza Quattro Formaggi</th>
+                        <th>Authentic Carbonara</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td><img src="assets/img/recipes/lasagna.jpg" width="100" height="100"></td>
-                        <td><img src="assets/img/recipes/pizza-quatro-formaggi.jpg" width="100" height="100"></td>
-                        <td><img src="assets/img/recipes/pasta-carbonara.jpg" width="100" height="100"></td>
+                        <td><img src="assets/img/recipes/lasagna.jpg" alt="Homemade Classic Lasagna with rich meat sauce" class="recipe-image"></td>
+                        <td><img src="assets/img/recipes/pizza-quatro-formaggi.jpg" alt="Four Cheese Pizza with perfect crust" class="recipe-image"></td>
+                        <td><img src="assets/img/recipes/pasta-carbonara.jpg" alt="Creamy Pasta Carbonara with pancetta" class="recipe-image"></td>
                     </tr>
                     <tr>
-                        <td><a href="#">See recipe</a></td>
-                        <td><a href="#">See recipe</a></td>
-                        <td><a href="#">See recipe</a></td>
+                        <td><a href="#" class="recipe-link">View Recipe</a></td>
+                        <td><a href="#" class="recipe-link">View Recipe</a></td>
+                        <td><a href="#" class="recipe-link">View Recipe</a></td>
                     </tr>
                     <tr>
-                        <td>Cooking time: <b>60 min</b></td>
-                        <td>Cooking time: <b>45 min</b></td>
-                        <td>Cooking time: <b>30 min</b></td>
+                        <td>Preparation: <b>60 min</b> • Difficulty: Medium</td>
+                        <td>Preparation: <b>45 min</b> • Difficulty: Easy</td>
+                        <td>Preparation: <b>30 min</b> • Difficulty: Easy</td>
                     </tr>
+                </tbody>
             </table>
         </section>
 
-        <section>
-            <h2>Why choose us?</h2>
-            <dl>
-                <dt>Best recipes</dt>
-                <dd>We have the best recipes for your favorite dishes.</dd>
-                <dt>Best ingredients</dt>
-                <dd>We use only the best ingredients for our recipes.</dd>
-                <dt>Best chefs</dt>
-                <dd>Our chefs are the best in the world.</dd>
-            </dl>
-        </section>
+        <div class="mission-and-why-choose">
+            <section class="mission">
+                <h2 id="mission">Our Mission</h2>
+                <p><b>At CookIt</b>, we're passionate about bringing the joy of cooking to your kitchen. Our mission is to make cooking accessible, enjoyable, and rewarding for everyone.</p>
+                <p>Discover a world of culinary delights in our <a href="recipes.html#recipes-list">extensive recipe collection</a>, from quick weekday meals to impressive dinner party dishes.</p>
+                <p>Need help or have questions? Check out our FAQ section below or <a href="contact.html">reach out to our friendly team</a>.</p>
+            </section>
 
-        <section>
-            <h2 id="faq">FAQ</h2>
+            <section class="why-choose-us">
+                <h2>Why Choose CookIt?</h2>
+                <dl>
+                    <dt>Expert-Tested Recipes</dt>
+                    <dd>Every recipe is thoroughly tested by our professional chefs to ensure perfect results in your kitchen.</dd>
+                    <dt>Quality Ingredients</dt>
+                    <dd>We carefully select and recommend the finest ingredients to enhance the flavors of each dish.</dd>
+                    <dt>Step-by-Step Guidance</dt>
+                    <dd>Our detailed instructions and tips help you achieve restaurant-quality results at home.</dd>
+                </dl>
+            </section>
+        </div>
+
+        <section class="faq">
+            <h2 id="faq">Frequently Asked Questions</h2>
             <details>
-                <summary>What is CookIt?</summary>
-                <p>CookIt is a website that helps you to find the best recipes for your favorite dishes.</p>
+                <summary>What makes CookIt special?</summary>
+                <p>CookIt stands out for its expertly curated recipes, detailed instructions, and commitment to helping home cooks succeed. Our recipes are tested multiple times to ensure reliability and delicious results.</p>
             </details>
             <details>
-                <summary>How to use CookIt?</summary>
-                <p>Just click on the recipes you want to see.</p>
+                <summary>How do I get started with CookIt?</summary>
+                <p>Simply browse our recipe collection, choose a dish that interests you, and follow our step-by-step instructions. Our recipes include detailed ingredient lists, timing information, and helpful tips for success.</p>
             </details>
             <details>
-                <summary>Do we have partners?</summary>
-                <p>Yes, we have partners all over the world. One of our main partners is <a href="https://www.allrecipes.com/">AllRecipes</a></p>
+                <summary>Do you have partnerships?</summary>
+                <p>Yes, we collaborate with renowned chefs, quality ingredient suppliers, and respected culinary institutions worldwide. One of our main partners is <a href="https://www.allrecipes.com/">AllRecipes</a>, helping us bring you an even wider variety of trusted recipes.</p>
             </details>
         </section>
-
     </main>
 
     <footer>
-        <p>&copy; 2020 CookIt</p>
-        Contact us: <a href="mailto:k6NtH@example.com">k6NtH@example.com</a>
+        <p>&copy; 2025 CookIt</p>
+        <p>Contact us: <a href="mailto:k6NtH@example.com">k6NtH@example.com</a></p>
     </footer>
-
 </body>
 </html>
