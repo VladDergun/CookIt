@@ -39,6 +39,39 @@
     #cooking-videos li {
         margin-bottom: 5px;
     }
+    .chef-image {
+        float: left;
+        width: 300px;
+        height: 400px;
+        object-fit: cover;
+        border-radius: 8px;
+        margin-right: 2rem;
+    }
+    .gordon-section {
+        display: flex;
+        align-items: center;
+        margin: 20px;
+        padding: 20px;
+        background-color: #f9f9f9;
+        border-radius: 8px;
+    }
+    .gordon-content {
+        flex: 1;
+        margin-left: 20px;
+    }
+    .gordon-content h3 {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+    .gordon-recipes{
+        padding-left: 0;
+    }
+    .gordon-recipes li {
+        border-bottom: 2px solid #d5d5d55e;
+        padding-bottom: 2px;
+        margin-bottom: 5px;
+        list-style: none;
+    }
 </style>
 <body>
     <header class="header">
@@ -62,6 +95,24 @@
 
         <section>
             <h2>Recipes prepared by a legend</h2>
+            <div class="gordon-section">
+                <img src="assets/img/gordon-ramsay.png" alt="Chef Gordon Ramsay" class="chef-image">
+                <div class="gordon-content">
+                    <h3>Gordon Ramsay's Culinary Excellence</h3>
+                    <p>Welcome to our exclusive collection of recipes crafted by the legendary Chef Gordon Ramsay. With his signature passion for perfection and unparalleled expertise, Chef Ramsay brings his Michelin-starred excellence directly to your kitchen.</p>
+                   
+                    <p>Each recipe has been meticulously developed and tested in Chef Ramsay's kitchen, ensuring that you can recreate his world-famous dishes with precision. From his iconic Beef Wellington to the perfect scrambled eggs, these recipes combine classic techniques with modern twists.</p>
+
+
+                    <h4>Featured Recipes:</h4>
+                    <ul class="gordon-recipes">
+                        <li>Signature Beef Wellington - A masterpiece of tender beef and mushroom duxelles</li>
+                        <li>Perfect Scrambled Eggs - Creamy, luxurious, and never overcooked</li>
+                        <li>Restaurant-Style Risotto - Creamy, al dente perfection</li>
+                        <li>Pan-Seared Sea Bass - With crispy skin and herb sauce</li>
+                    </ul>
+                </div>
+            </div>
         </section>
 
         <section id="cooking-videos">
