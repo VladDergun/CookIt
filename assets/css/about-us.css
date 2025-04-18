@@ -1,0 +1,197 @@
+.about-mission {
+    padding: 40px;
+    max-width: 800px;
+    margin: 40px auto;
+}
+
+.about-mission h2 {
+    color: #cf3917;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.about-mission p {
+    font-size: 1.2em;
+    line-height: 1.8;
+    color: #444;
+    text-align: center;
+}
+
+
+i + b {
+    color: #cf3917;
+    font-style: italic;
+}
+
+.about-mission p i{
+    color: #cf3917;
+    font-weight: bold;
+}
+
+.about-history {
+    padding: 40px;
+    max-width: 800px;
+    margin: 40px auto;
+}
+
+.about-history h2 {
+    color: #cf3917;
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.about-history table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin: 20px 0;
+}
+
+.about-history caption {
+    font-size: 1.2em;
+    color: #666;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.about-history th {
+    background-color: #f0f7ff;
+    color: #333;
+    font-weight: bold;
+    padding: 15px;
+    text-align: left;
+    border-bottom: 2px solid #cf3917;
+}
+
+.about-history td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.about-history td[rowspan] {
+    background-color: #f8f8f8;
+    font-weight: bold;
+    color: #cf3917;
+    text-align: center;
+    border-right: 1px solid #eee;
+}
+
+.about-values {
+    padding: 40px;
+    background-color: #fff;
+    max-width: 800px;
+    margin: 40px auto;
+}
+
+.about-values h2 {
+    color: #cf3917;
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+.values-grid > .value-item > h3{
+    text-decoration: underline;
+}
+
+.value-item {
+    background-color: #f8f8f8;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.value-item h3 {
+    color: #cf3917;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.about-team {
+    padding: 40px;
+    background-color: #fff;
+    max-width: 800px;
+    margin: 40px auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.about-team h2 {
+    color: #cf3917;
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.team-member {
+    background-color: #f8f8f8;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.team-member h3 {
+    color: #cf3917;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.team-role {
+    color: #666;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    font-style: italic;
+}
+
+@media (max-width: 768px) {
+    .values-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-mission,
+    .about-history,
+    .about-values,
+    .about-team {
+        margin: 20px;
+        padding: 20px;
+    }
+
+    .about-mission h2,
+    .about-history h2,
+    .about-values h2,
+    .about-team h2 {
+        font-size: 2em;
+    }
+
+    .about-history table {
+        font-size: 0.9em;
+    }
+
+    .value-item,
+    .team-member {
+        padding: 15px;
+    }
+
+    .value-item h3,
+    .team-member h3 {
+        font-size: 1.3em;
+    }
+}

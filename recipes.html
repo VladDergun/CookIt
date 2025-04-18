@@ -11,6 +11,7 @@
     <meta og:description="CookIt is a website that helps you to find the best recipes for your favorite dishes.">
     <title>Recipes | CookIt</title>
     <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/dialog.css">
 </head>
 <style>
     #cooking-videos {
@@ -115,6 +116,45 @@
             </div>
         </section>
 
+        <section class="recipes-section">
+            <h2>Our Recipes</h2>
+            <div class="recipes-container">
+                <article class="recipe-card" data-difficulty="medium">
+                    <div class="recipe-image-container">
+                        <img src="assets/img/recipes/lasagna.jpg" alt="Homemade Classic Lasagna with rich meat sauce" class="recipe-image">
+                        <span class="recipe-difficulty">Medium</span>
+                    </div>
+                    <div class="recipe-content">
+                        <h3>Classic Lasagna</h3>
+                        <p class="recipe-info">Preparation: <b>60 min</b></p>
+                        <button class="recipe-link" data-recipe="lasagna">View Recipe</button>
+                    </div>
+                </article>
+                <article class="recipe-card" data-difficulty="easy">
+                    <div class="recipe-image-container">
+                        <img src="assets/img/recipes/pizza-quatro-formaggi.jpg" alt="Four Cheese Pizza with perfect crust" class="recipe-image">
+                        <span class="recipe-difficulty">Easy</span>
+                    </div>
+                    <div class="recipe-content">
+                        <h3>Pizza Quattro Formaggi</h3>
+                        <p class="recipe-info">Preparation: <b>45 min</b></p>
+                        <button class="recipe-link" data-recipe="pizza">View Recipe</button>
+                    </div>
+                </article>
+                <article class="recipe-card" data-difficulty="easy">
+                    <div class="recipe-image-container">
+                        <img src="assets/img/recipes/pasta-carbonara.jpg" alt="Creamy Pasta Carbonara with pancetta" class="recipe-image">
+                        <span class="recipe-difficulty">Easy</span>
+                    </div>
+                    <div class="recipe-content">
+                        <h3>Authentic Carbonara</h3>
+                        <p class="recipe-info">Preparation: <b>30 min</b></p>
+                        <button class="recipe-link" data-recipe="carbonara">View Recipe</button>
+                    </div>
+                </article>
+            </div>
+        </section>
+
         <section id="cooking-videos">
             <h2>Cooking videos</h2>
             <p style="font-size: 16px; margin-bottom: 10px;">Check out our cooking videos</p>
@@ -140,11 +180,29 @@
                 <p>Yes, we collaborate with renowned chefs, quality ingredient suppliers, and respected culinary institutions worldwide. One of our main partners is <a href="https://www.allrecipes.com/">AllRecipes</a>, helping us bring you an even wider variety of trusted recipes.</p>
             </details>
         </section>
+
+
+        <div class="dialog-window closed">
+            <div class="dialog-container">
+                <div class="dialog-header">
+                    CookIt Chatbot
+                    <button class="dialog-close">×</button>
+                </div>
+                <div class="dialog-messages">
+                </div>
+                <div class="dialog-input">
+                    <input id="chatbot-user-input" type="text" placeholder="Type a message...">
+                    <button id="chatbot-send-button">Send</button>
+                </div>
+            </div>
+        </div>
     </main>
 
     <footer>
         <p>&copy; 2020 CookIt</p>
         Contact us: <a href="mailto:k6NtH@example.com">k6NtH@example.com</a>
     </footer>
+    <script src="assets/js/recipes.js"></script>
+    <script src="assets/js/dialog.js"></script>
 </body>
 </html>

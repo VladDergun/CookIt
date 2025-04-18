@@ -11,6 +11,7 @@
     <meta og:description="CookIt is a website that helps you to find the best recipes for your favorite dishes.">
     <title>Contact us | CookIt</title>
     <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/dialog.css">
     <style>
 
         form {
@@ -84,6 +85,20 @@
             <input type="submit" value="Send">
         </form>
 
+        <section class="dom-demo">
+            <h2>DOM Manipulation Demo</h2>
+            <div id="demo-container" style="border: 1px solid #ddd; padding: 15px; margin: 15px 0; min-height: 100px;">
+                <p id="demo-text">This is the original text</p>
+            </div>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px;">
+                <button onclick="appendDemo()" style="background-color: #4CAF50;">Append</button>
+                <button onclick="prependDemo()" style="background-color: #2196F3;">Prepend</button>
+                <button onclick="afterDemo()" style="background-color: #9C27B0;">After</button>
+                <button onclick="replaceDemo()" style="background-color: #FF9800;">Replace</button>
+                <button onclick="removeDemo()" style="background-color: #f44336;">Remove</button>
+            </div>
+        </section>
+
         <section class="faq">
             <h2 id="faq">Frequently Asked Questions</h2>
             <details>
@@ -99,6 +114,21 @@
                 <p>Yes, we collaborate with renowned chefs, quality ingredient suppliers, and respected culinary institutions worldwide. One of our main partners is <a href="https://www.allrecipes.com/">AllRecipes</a>, helping us bring you an even wider variety of trusted recipes.</p>
             </details>
         </section>
+
+        <div class="dialog-window closed">
+            <div class="dialog-container">
+                <div class="dialog-header">
+                    CookIt Chatbot
+                    <button class="dialog-close">×</button>
+                </div>
+                <div class="dialog-messages">
+                </div>
+                <div class="dialog-input">
+                    <input id="chatbot-user-input" type="text" placeholder="Type a message...">
+                    <button id="chatbot-send-button">Send</button>
+                </div>
+            </div>
+        </div>
 
     </main>
 
@@ -137,4 +167,49 @@
     </footer>
 
 </body>
+<script src="assets/js/dialog.js"></script>
+<script>
+    function appendDemo() {
+        const container = document.getElementById('demo-container');
+        const newElement = document.createElement('p');
+        newElement.textContent = 'Appended text';
+        container.append(newElement);
+    }
+
+    function prependDemo() {
+        const container = document.getElementById('demo-container');
+        const newElement = document.createElement('p');
+        newElement.textContent = 'Prepended text';
+        container.prepend(newElement);
+    }
+
+    function afterDemo() {
+        const demoText = document.getElementById('demo-text');
+        if(!demoText)
+        return;
+        const newElement = document.createElement('p');
+        newElement.textContent = 'Added after original';
+        demoText.after(newElement);
+    }
+
+    function replaceDemo() {
+        const demoText = document.getElementById('demo-text');
+        if(!demoText)
+        return;
+        const newElement = document.createElement('p');
+        newElement.textContent = 'Replaced text';
+        newElement.id = 'demo-text';
+        demoText.replaceWith(newElement);
+    }
+
+    function removeDemo() {
+        const demoText = document.getElementById('demo-text');
+        if(!demoText)
+        return;
+        if (demoText) {
+            demoText.remove();
+        }
+    }
+</script>
+
 </html>
