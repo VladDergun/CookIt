@@ -102,7 +102,7 @@
             </ul>
         </nav>
 
-        
+
 
     </header>
 
@@ -112,6 +112,7 @@
                 <img src="assets/img/hero.jpg" alt="CookIt Hero" class="hero-image">
                 <figcaption><h1>CookIt - List of recipes</h1></figcaption>
             </figure>     
+            <span id="moving-knife" style="position: absolute; top: 0; left: 0; font-size: 100px; cursor: pointer;">🔪</span>
         </section>
 
         <section>
@@ -235,7 +236,6 @@
     </footer>
     <script src="assets/js/dialog.js"></script>
     <script src="assets/js/recipes.js"></script>
-    <script src="assets/js/menu.js"></script>
 </body>
 
 <script>
@@ -247,6 +247,35 @@
         };
 
         tipContainer.addEventListener('click', tipContainerClickHandler);
+    }
+
+
+    const movingKnife = document.getElementById('moving-knife');
+    
+    movingKnife.onmousedown = (event) => {
+        event.preventDefault();
+        let shiftX = event.clientX - movingKnife.getBoundingClientRect().left;
+        let shiftY = event.clientY - movingKnife.getBoundingClientRect().top;
+
+        movingKnife.style.transition = 'none';
+        movingKnife.style.zIndex = 1000;
+
+        function moveAt(pageX, pageY) {
+            movingKnife.style.left = pageX - shiftX + 'px';
+            movingKnife.style.top = pageY - shiftY + 'px';
+        }
+
+        function onMouseMove(event) {
+            moveAt(event.pageX, event.pageY);
+        }
+
+        document.addEventListener('mousemove', onMouseMove);
+        document.onmouseup = function() {
+            document.removeEventListener('mousemove', onMouseMove);
+            document.onmouseup = null;
+            movingKnife.style.transition = '';
+            movingKnife.style.zIndex = '';
+        };
     }
 </script>
 </html>

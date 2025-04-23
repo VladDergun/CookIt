@@ -30,7 +30,7 @@
             <figure class="hero-container">
                 <img src="assets/img/hero.jpg" alt="CookIt Hero" class="hero-image">
                 <figcaption><h1>CookIt - About us</h1></figcaption>
-            </figure>     
+            </figure>
         </section>
 
         <section class="about-mission">
@@ -198,4 +198,31 @@
 </body>
 
 <script src="assets/js/dialog.js"></script>
+
+<script>
+    const companyValues = document.querySelectorAll('.value-item');
+    companyValues.forEach(value => {
+        value.addEventListener('mouseover', (event) => {
+            const target = event.target.closest('.value-item');
+            target.style.transition = 'background-color 0.3s ease';
+            target.style.backgroundColor = '#ffa2a2';
+
+            if (event.relatedTarget) {
+                lastHoveredElement = event.relatedTarget;
+                console.log('Mouse entered from:', event.relatedTarget.tagName, 
+                            event.relatedTarget.className || 'no class');
+            }
+        });
+        
+        value.addEventListener('mouseout', (event) => {
+            const target = event.target.closest('.value-item');
+            target.style.backgroundColor = '';
+
+            if (event.relatedTarget) {
+                console.log('Mouse leaving to:', event.relatedTarget.tagName, 
+                            event.relatedTarget.className || 'no class');
+            }
+        });
+    });
+</script>
 </html>
