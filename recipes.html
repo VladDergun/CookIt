@@ -12,6 +12,7 @@
     <title>Recipes | CookIt</title>
     <link rel="stylesheet" href="assets/css/styles.css">
     <link rel="stylesheet" href="assets/css/dialog.css">
+    <link rel="stylesheet" href="assets/css/recipe-popup.css">
 </head>
 <style>
     #cooking-videos {
@@ -50,6 +51,7 @@
     }
     .gordon-section {
         display: flex;
+        flex-wrap: wrap;
         align-items: center;
         margin: 20px;
         padding: 20px;
@@ -73,6 +75,21 @@
         margin-bottom: 5px;
         list-style: none;
     }
+
+    .cooking-tips{
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+    }
+
+
+    .cooking-tip {
+        margin: 10px;
+        max-width: 80%;
+        border: 3px solid #cf3917;
+        border-radius: 10px;
+        padding: 10px;
+    }
 </style>
 <body>
     <header class="header">
@@ -84,6 +101,9 @@
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
+
+        
+
     </header>
 
     <main>
@@ -118,41 +138,21 @@
 
         <section class="recipes-section">
             <h2>Our Recipes</h2>
-            <div class="recipes-container">
-                <article class="recipe-card" data-difficulty="medium">
-                    <div class="recipe-image-container">
-                        <img src="assets/img/recipes/lasagna.jpg" alt="Homemade Classic Lasagna with rich meat sauce" class="recipe-image">
-                        <span class="recipe-difficulty">Medium</span>
-                    </div>
-                    <div class="recipe-content">
-                        <h3>Classic Lasagna</h3>
-                        <p class="recipe-info">Preparation: <b>60 min</b></p>
-                        <button class="recipe-link" data-recipe="lasagna">View Recipe</button>
-                    </div>
-                </article>
-                <article class="recipe-card" data-difficulty="easy">
-                    <div class="recipe-image-container">
-                        <img src="assets/img/recipes/pizza-quatro-formaggi.jpg" alt="Four Cheese Pizza with perfect crust" class="recipe-image">
-                        <span class="recipe-difficulty">Easy</span>
-                    </div>
-                    <div class="recipe-content">
-                        <h3>Pizza Quattro Formaggi</h3>
-                        <p class="recipe-info">Preparation: <b>45 min</b></p>
-                        <button class="recipe-link" data-recipe="pizza">View Recipe</button>
-                    </div>
-                </article>
-                <article class="recipe-card" data-difficulty="easy">
-                    <div class="recipe-image-container">
-                        <img src="assets/img/recipes/pasta-carbonara.jpg" alt="Creamy Pasta Carbonara with pancetta" class="recipe-image">
-                        <span class="recipe-difficulty">Easy</span>
-                    </div>
-                    <div class="recipe-content">
-                        <h3>Authentic Carbonara</h3>
-                        <p class="recipe-info">Preparation: <b>30 min</b></p>
-                        <button class="recipe-link" data-recipe="carbonara">View Recipe</button>
-                    </div>
-                </article>
-            </div>
+        </section>
+
+        <section class="cooking-tips">
+            <h2>Cooking tips</h2>
+            <ul class="cooking-tips-container">
+                <li class="cooking-tip">
+                    <span>Tip 1. Love what you are doing</span>
+                </li>
+                <li class="cooking-tip">
+                    <span>Tip 2. Focus on the process, not on the result</span>
+                </li>
+                <li class="cooking-tip">
+                    <span>Tip 3. You will not make a perfect dish right from the beginning. Be patient and practise.</span>
+                </li>
+            </ul>
         </section>
 
         <section id="cooking-videos">
@@ -198,11 +198,55 @@
         </div>
     </main>
 
-    <footer>
-        <p>&copy; 2020 CookIt</p>
-        Contact us: <a href="mailto:k6NtH@example.com">k6NtH@example.com</a>
+    <footer class="site-footer">
+        <div class="footer-main">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <div class="contact-info">
+                        <a href="mailto:k6NtH@example.com" class="footer-link">
+                            <span class="icon">✉</span>
+                            k6NtH@example.com
+                        </a>
+                        <a id="phone-number" href="tel:+1234567890" class="footer-link">
+                            <span class="icon">📞</span>
+                            +1 (234) 567-890
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Follow Us</h3>
+                    <ul class="social-links">
+                        <li><a href="#" class="footer-link"><span class="icon">👥</span>Facebook</a></li>
+                        <li><a href="#" class="footer-link"><span class="icon">📸</span>Instagram</a></li>
+                        <li><a href="#" class="footer-link"><span class="icon">🐦</span>Twitter</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span class="copyright" onclick="alert('CookIt - Best recipes')">©2025 CookIt</span>
+            <nav class="footer-nav">
+                <a href="about.html" class="footer-link">About</a>
+                <a href="recipes.html" class="footer-link">Recipes</a>
+                <a href="contact.html" class="footer-link">Contact</a>
+            </nav>
+        </div>
     </footer>
-    <script src="assets/js/recipes.js"></script>
     <script src="assets/js/dialog.js"></script>
+    <script src="assets/js/recipes.js"></script>
+    <script src="assets/js/menu.js"></script>
 </body>
+
+<script>
+    const tipContainer = document.querySelector(".cooking-tips-container");
+    if(tipContainer){  
+        const tipContainerClickHandler = (event) => {
+          const target = event.target;
+          target.closest('li').style.background = '#ffc65c';
+        };
+
+        tipContainer.addEventListener('click', tipContainerClickHandler);
+    }
+</script>
 </html>
