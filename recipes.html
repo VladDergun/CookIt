@@ -11,7 +11,6 @@
     <meta og:description="CookIt is a website that helps you to find the best recipes for your favorite dishes.">
     <title>Recipes | CookIt</title>
     <link rel="stylesheet" href="assets/css/styles.css">
-    <link rel="stylesheet" href="assets/css/dialog.css">
     <link rel="stylesheet" href="assets/css/recipe-popup.css">
 </head>
 <style>
@@ -94,16 +93,19 @@
 <body>
     <header class="header">
         <nav class="nav">
+            <button class="burger-menu" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
             <ul class="nav-list">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="recipes.html">Recipes</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
+            <div class="nav-overlay"></div>
         </nav>
-
-
-
     </header>
 
     <main>
@@ -181,22 +183,6 @@
                 <p>Yes, we collaborate with renowned chefs, quality ingredient suppliers, and respected culinary institutions worldwide. One of our main partners is <a href="https://www.allrecipes.com/">AllRecipes</a>, helping us bring you an even wider variety of trusted recipes.</p>
             </details>
         </section>
-
-
-        <div class="dialog-window closed">
-            <div class="dialog-container">
-                <div class="dialog-header">
-                    CookIt Chatbot
-                    <button class="dialog-close">×</button>
-                </div>
-                <div class="dialog-messages">
-                </div>
-                <div class="dialog-input">
-                    <input id="chatbot-user-input" type="text" placeholder="Type a message...">
-                    <button id="chatbot-send-button">Send</button>
-                </div>
-            </div>
-        </div>
     </main>
 
     <footer class="site-footer">
@@ -234,7 +220,7 @@
             </nav>
         </div>
     </footer>
-    <script src="assets/js/dialog.js"></script>
+    <script src="assets/js/burger-menu.js"></script>
     <script src="assets/js/recipes.js"></script>
 </body>
 

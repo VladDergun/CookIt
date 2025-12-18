@@ -11,18 +11,23 @@
     <meta og:description="CookIt is a website that helps you to find the best recipes for your favorite dishes.">
     <title>About us | CookIt</title>
     <link rel="stylesheet" href="assets/css/styles.css">
-    <link rel="stylesheet" href="assets/css/dialog.css">
     <link rel="stylesheet" href="assets/css/about-us.css">
 </head>
 <body>
     <header class="header">
         <nav class="nav">
+            <button class="burger-menu" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
             <ul class="nav-list">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="recipes.html">Recipes</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
+            <div class="nav-overlay"></div>
         </nav>
     </header>
     <main>
@@ -140,23 +145,6 @@
             </details>
         </section>
 
-
-        
-        <div class="dialog-window closed">
-            <div class="dialog-container">
-                <div class="dialog-header">
-                    CookIt Chatbot
-                    <button class="dialog-close">×</button>
-                </div>
-                <div class="dialog-messages">
-                </div>
-                <div class="dialog-input">
-                    <input id="chatbot-user-input" type="text" placeholder="Type a message...">
-                    <button id="chatbot-send-button">Send</button>
-                </div>
-            </div>
-        </div>
-
     </main>
 
     <footer class="site-footer">
@@ -197,7 +185,7 @@
 
 </body>
 
-<script src="assets/js/dialog.js"></script>
+<script src="assets/js/burger-menu.js"></script>
 
 <script>
     const companyValues = document.querySelectorAll('.value-item');
